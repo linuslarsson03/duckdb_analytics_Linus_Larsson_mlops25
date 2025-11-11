@@ -1,14 +1,12 @@
 DESC TABLE funny_jokes;
 
-INSERT INTO funny_jokes
+INSERT INTO
     funny_jokes (id, joke_text, rating)
 VALUES 
-    (0, 'Why don`t programmers like light, becuase they attract bugs', 8)
+    (0, 'Why don’t programmers like light? Because they attract bugs.', 8);
 
-
-    
-INSERT
-	INTO
+-- inserting some more jokes
+INSERT INTO
 	funny_jokes (id,
 	joke_text,
 	rating)
@@ -26,9 +24,7 @@ VALUES
 'Why don’t skeletons fight each other? They don’t have the guts.',
 6);
 
-
-INSERT
-	INTO
+INSERT INTO
 	funny_jokes (id,
 	joke_text,
 	rating)
@@ -49,5 +45,5 @@ VALUES
 'How does a penguin build its house? Igloos it together.',
 1),
 (10,
-'A gothenburg person stands in queue for star wars. When someone cuts the line he says ge daj.',
+'A Gothenburg person stands in queue for Star Wars. When someone cuts the line he says "ge daj".',
 2);
