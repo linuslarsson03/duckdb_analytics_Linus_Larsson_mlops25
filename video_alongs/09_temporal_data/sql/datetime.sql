@@ -19,3 +19,26 @@ FROM staging.sweden_holidays;
 -- DATE functions
 SELECT today();
 
+SELECT 
+  today() AS today,  *
+FROM
+staging.sweden_holidays;
+
+-- Pick out weekday
+SELECT
+    date, dayname(date) as weekday
+FROM staging.sweden_holidays
+
+-- latest from two dates
+SELECT
+    *,
+    today() as today,
+    greatest(date, today) as later_day
+FROM staging.sweden_holidays;
+
+-- convert date to string
+SELECT
+    date,
+    strftime(date, '%d/%m/%y') as date_string
+FROM
+    staging.sweden_holidays
