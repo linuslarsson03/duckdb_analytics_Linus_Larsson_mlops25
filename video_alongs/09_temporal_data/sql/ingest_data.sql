@@ -1,11 +1,11 @@
 CREATE SCHEMA IF NOT EXISTS staging;
 
 CREATE TABLE
-    IF NOT EXISTS staging.train_schdules AS (
+    IF NOT EXISTS staging.train_schedules AS (
         SELECT
             *
         FROM
-            read_csv_auto ('data/train_schedules.csv')
+            read_csv_auto('data/train_schedules.csv')
     );
 
 CREATE TABLE
@@ -13,5 +13,5 @@ CREATE TABLE
         SELECT
             *
         FROM
-            read_csv_auto ('sweden_holidays.csv')
+            read_csv_auto('data/sweden_holidays.csv')
     );
