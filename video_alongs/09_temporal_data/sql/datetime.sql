@@ -42,3 +42,21 @@ SELECT
     strftime(date, '%d/%m/%y') as date_string
 FROM
     staging.sweden_holidays
+
+
+SELECT
+    date,
+    strftime('%d/%m/%Y', date) AS date_string,
+    typeof(strftime('%d/%m/%Y', date)) AS date_string_type
+FROM staging.sweden_holidays;
+
+
+-- convert string to date
+SELECT
+    date,
+    strftime (date, '%d/%m/%Y') as date_string,
+    typeof (date_string),
+    strptime (date_string, '%d/%m/%Y')::DATE as new_date,
+    typeof (new_date)
+FROM
+    staging.sweden_holidays;
